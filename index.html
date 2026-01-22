@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Allen C Fredrick  Resume</title>
+  <link rel="icon" type="image/png" sizes="32x32" href="../cv-website/images/favicon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Poppins:wght@700;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- Sticky progress bar (auto-updates via script.js) -->
+  <div id="progress" aria-hidden="true"></div>
+
+  <header class="site-header" role="banner">
+    <nav class="nav" aria-label="Primary">
+      <a class="brand" href="#hero">
+        <img src="../cv-resume-website/images/favicon.png" alt="Logo" class="brand-logo">
+        <span>Allen C Fredrick</span>
+      </a>
+
+      <!-- Dark mode toggle -->
+      <label class="theme-switch"><input type="checkbox" id="theme-toggle" role="switch" aria-label="Toggle dark mode"><span class="slider" aria-hidden="true"></span><span class="switch-label">Theme</span></label>
+
+      <!-- Mobile hamburger -->
+      <button class="nav-toggle" aria-label="Toggle navigation" aria-controls="nav-list" aria-expanded="false">Menu</button>
+
+      <ul id="nav-list" class="nav-list">
+        <li><a href="#hero">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#certifications">Certifications</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li><a href="../cv-resume-website/docs/resume.pdf" target="_blank" rel="noopener">Resume</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="page" class="page" role="main">
+    <!-- Hero -->
+    <section id="hero" class="panel section" tabindex="-1">
+      <div class="container">
+        <div class="hero-grid">
+          <div class="profile-container reveal">
+            <!-- Replace image path if you copy assets locally -->
+            <img src="../cv-resume-website/images/profile.jpg" alt="Profile photo" class="profile-photo" />
+          </div>
+          <div class="hero-copy">
+            <h1 class="section-title reveal">From Data to Insight</h1>
+            <p class="section-subtitle reveal">Technical Content Architect & Chatbot Developer  Bangalore, India</p>
+            <a href="#about" class="btn primary reveal">Explore</a>
+          </div>
+        </div>
+      </div>
+      <a class="scroll-down" href="#about" aria-label="Scroll to About">
+        <span class="scroll-icon"></span>
+      </a>
+    </section>
+
+    <!-- About -->
+    <section id="about" class="panel section" tabindex="-1">
+      <div class="container">
+        <h2 class="section-title reveal">About</h2>
+        <p class="section-subtitle reveal">A concise summary of your background and focus areas.</p>
+        <!-- Edit below with your bio -->
+        <p class="reveal">I started in customer service and grew through technical support, sales, and web content management. I now lead technical writing, building clear, actionable documentation and tools.</p>
+      </div>
+    </section>
+
+    <!-- Skills -->
+    <section id="skills" class="panel section" tabindex="-1">
+      <div class="container">
+        <h2 class="section-title reveal">Skills</h2>
+        <p class="section-subtitle reveal">Core technical and documentation competencies.</p>
+        <div class="chips reveal-group">
+          <!-- Edit chips as needed -->
+          <span class="chip reveal">DITA/XML</span>
+          <span class="chip reveal">API Docs</span>
+          <span class="chip reveal">HTML/CSS</span>
+          <span class="chip reveal">JavaScript</span>
+          <span class="chip reveal">C/C++</span>
+          <span class="chip reveal">Markdown</span>
+          <span class="chip reveal">Git</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Experience (timeline) -->
+    <section id="experience" class="panel section" tabindex="-1">
+      <div class="container">
+        <h2 class="section-title reveal">Experience</h2>
+        <p class="section-subtitle reveal">Recent roles and impact.</p>
+        <div class="timeline">
+          <!-- Duplicate items for more roles -->
+          <article class="timeline-item reveal">
+            <div class="timeline-marker" aria-hidden="true"></div>
+            <div class="timeline-card">
+              <h3>Lead Technical Writer</h3>
+              <p class="meta">Infinite Computer Solutions  Apr 2024  Present</p>
+              <ul>
+                <li>Delivery planning, JIRA tracking, weekly stand-ups</li>
+                <li>Installation guides, feature docs, release notes</li>
+                <li>Custom chatbot for documentation discovery</li>
+              </ul>
+            </div>
+          </article>
+          <article class="timeline-item reveal">
+            <div class="timeline-marker" aria-hidden="true"></div>
+            <div class="timeline-card">
+              <h3>Staff Technical Writer</h3>
+              <p class="meta">Salesforce  Feb 2024  Apr 2024</p>
+              <ul>
+                <li>API documentation with developer teams</li>
+                <li>Code-related docs and references</li>
+              </ul>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects (cards) -->
+    <section id="projects" class="panel section" tabindex="-1">
+      <div class="container">
+        <h2 class="section-title reveal">Projects</h2>
+        <p class="section-subtitle reveal">Selected work and documentation portfolios.</p>
+        <div class="card-grid">
+          <!-- Duplicate cards to add more projects -->
+          <article class="card reveal">
+            <h3>PowerEdge Portfolio</h3>
+            <p>Dell Technologies  Hardware product documentation</p>
+            <a class="card-link" href="https://www.dell.com/support/home/en-in/product-support/product/poweredge-r940xa/overview" target="_blank" rel="noopener">View</a>
+          </article>
+          <article class="card reveal">
+            <h3>OpenManage Portfolio</h3>
+            <p>Dell Technologies  Software docs and references</p>
+            <a class="card-link" href="https://www.dell.com/support/home/en-in/product-support/product/poweredge-c6400/overview" target="_blank" rel="noopener">View</a>
+          </article>
+          <article class="card reveal">
+            <h3>Converged Infrastructure</h3>
+            <p>Dell Technologies  VxBlock documentation</p>
+            <span class="card-link" aria-hidden="true">Internal</span>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Certifications -->
+    <section id="certifications" class="panel section" tabindex="-1">
+      <div class="container">
+        <h2 class="section-title reveal">Certifications</h2>
+        <p class="section-subtitle reveal">Key training and credentials.</p>
+        <ul class="list reveal-group">
+          <!-- Edit items as needed -->
+          <li class="reveal">Agile/Scrum Methodology</li>
+          <li class="reveal">DITA/XML Documentation</li>
+          <li class="reveal">API Documentation Specialist</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="panel section" tabindex="-1">
+      <div class="container">
+        <h2 class="section-title reveal">Contact Me</h2>
+        <div class="contact-wrap">
+          <div class="contact-info reveal">
+            <h3>Let's Connect</h3>
+            <p class="section-subtitle">I'm always interested in hearing about new opportunities, collaborations, or just connecting with fellow professionals in the field.</p>
+            <div class="info-list">
+              <div class="info-item">
+                <div class="info-icon">📍</div>
+                <div class="info-content">
+                  <div class="label">Location</div>
+                  <div class="value">Bangalore, India</div>
+                </div>
+              </div>
+              <div class="info-item">
+                <div class="info-icon">✉️</div>
+                <div class="info-content">
+                  <div class="label">Email</div>
+                  <a class="value" href="mailto:acf0916@gmail.com">acf0916@gmail.com</a>
+                </div>
+              </div>
+            </div>
+            <div class="socials">
+              <a class="social" href="https://www.linkedin.com/in/allen-c-fredrick" target="_blank" rel="noopener" aria-label="LinkedIn">in</a>
+              <a class="social" href="https://github.com/" target="_blank" rel="noopener" aria-label="GitHub">gh</a>
+            </div>
+          </div>
+
+          <form id="contactForm" class="contact-card reveal" novalidate>
+            <div class="row">
+              <div class="field">
+                <label for="name" class="field-label">Name</label>
+                <input id="name" name="name" type="text" autocomplete="name" placeholder="Your name" required>
+                <small class="hint">Required</small>
+              </div>
+              <div class="field">
+                <label for="email" class="field-label">Email</label>
+                <input id="email" name="email" type="email" autocomplete="email" placeholder="Your email" required>
+                <small class="hint">Required</small>
+              </div>
+            </div>
+            <div class="field">
+              <label for="subject" class="field-label">Subject</label>
+              <input id="subject" name="subject" type="text" placeholder="Message subject" required>
+              <small class="hint">Required</small>
+            </div>
+            <div class="field">
+              <label for="message" class="field-label">Message</label>
+              <textarea id="message" name="message" rows="5" placeholder="Your message..." required></textarea>
+              <small class="hint">Required</small>
+            </div>
+            <button class="btn primary" type="submit">Send Message</button>
+            <p id="status" class="status" aria-live="polite"></p>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Back to top button -->
+  <button id="backToTop" class="back-to-top" aria-label="Back to top"></button>
+
+  <footer class="site-footer" role="contentinfo">
+    <div class="container">
+      <p>&copy; 2026 Allen C Fredrick. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
+
+
