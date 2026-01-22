@@ -66,8 +66,10 @@ body {
 .brand { display: inline-flex; align-items: center; gap: 10px; color: var(--text); text-decoration: none; font-weight: 700; }
 .brand-logo { width: 28px; height: 28px; border-radius: 6px; }
 .theme-toggle { margin-right: 10px; background: none; border: 1px solid var(--border); color: var(--text); border-radius: 8px; padding: 6px 10px; cursor: pointer; }
-.nav-toggle { display: none; background: none; color: var(--text); border: 1px solid var(--border); border-radius: 8px; padding: 6px 10px; }
-.nav-list { list-style: none; display: flex; gap: 16px; margin: 0; padding: 0; }
+.nav-toggle { display: none; background: none; color: var(--text); border: 1px solid var(--border); border-radius: 8px; padding: 6px 10px; left: 50%;
+    transform: translateX(-50%);
+    position: fixed;}
+.nav-list { list-style: none; display: flex; gap: 16px; margin: 0; padding: 0; align-items: center; }
 .nav-list a { color: var(--text); text-decoration: none; padding: 8px 12px; border-radius: 8px; border: 1px solid transparent; }
 .nav-list a:focus-visible { outline: 3px solid var(--primary-2); }
 .nav-list a.active { background: var(--primary); color: #fff; }
@@ -128,7 +130,20 @@ body {
 /* Mobile */
 @media (max-width: 900px) {
   .nav-toggle { display: inline-block; }
-  .nav-list { position: fixed; top: 56px; right: 12px; background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 10px; display: none; flex-direction: column; }
+.nav-list {
+    position: fixed;
+    top: 56px;
+    left: 50%;                  /* position left edge at 50% viewport width */
+    transform: translateX(-50%); /* shift left by half its own width to center */
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 10px;
+    display: none;
+    flex-direction: column;
+    align-items: center;       /* center items inside vertically */
+    z-index: 1000;             /* optional: ensure it’s above other content */
+}
   .nav-list.show { display: flex; }
   .hero-grid { grid-template-columns: 1fr; }
   .card-grid { grid-template-columns: repeat(1, minmax(0, 1fr)); }
@@ -162,3 +177,5 @@ body {
 /* Added from sample-frontend-mail.txt */
 .hint { color: var(--muted); opacity: .85; font-size: 0.85rem; margin-top: 4px; }
 .status { margin: 12px 0 0; min-height: 22px; color: var(--muted); font-weight: 500; }
+
+
