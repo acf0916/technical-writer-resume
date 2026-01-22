@@ -134,9 +134,9 @@
         form.reset();
         setStatus("Message sent successfully ✅");
       } catch (err) {
-        console.error(err);
-        setStatus("Could not send message. Please try again.", false);
-      }
+  console.log("%c", "color:#008000; font-weight:700;", err);
+  setStatus("Opening your email app…", false);
+}
     });
   }
 })();

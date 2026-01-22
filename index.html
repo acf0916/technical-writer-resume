@@ -167,6 +167,7 @@
     <section id="contact" class="panel section" tabindex="-1">
       <div class="container">
         <h2 class="section-title reveal">Contact Me</h2>
+		
         <div class="contact-wrap">
           <div class="contact-info reveal">
             <h3>Let's Connect</h3>
@@ -193,32 +194,76 @@
             </div>
           </div>
 
-          <form id="contactForm" class="contact-card reveal" novalidate>
-            <div class="row">
-              <div class="field">
-                <label for="name" class="field-label">Name</label>
-                <input id="name" name="name" type="text" autocomplete="name" placeholder="Your name" required>
-                <small class="hint">Required</small>
-              </div>
-              <div class="field">
-                <label for="email" class="field-label">Email</label>
-                <input id="email" name="email" type="email" autocomplete="email" placeholder="Your email" required>
-                <small class="hint">Required</small>
-              </div>
-            </div>
-            <div class="field">
-              <label for="subject" class="field-label">Subject</label>
-              <input id="subject" name="subject" type="text" placeholder="Message subject" required>
-              <small class="hint">Required</small>
-            </div>
-            <div class="field">
-              <label for="message" class="field-label">Message</label>
-              <textarea id="message" name="message" rows="5" placeholder="Your message..." required></textarea>
-              <small class="hint">Required</small>
-            </div>
-            <button class="btn primary" type="submit">Send Message</button>
-            <p id="status" class="status" aria-live="polite"></p>
-          </form>
+          <form id="contactForm" class="contact-card reveal"
+      action="mailto:acf0916@gmail.com"
+      method="GET"
+      enctype="text/plain">
+
+  <div class="row">
+    <div class="field">
+      <label for="name" class="field-label">Name</label>
+      <input id="name" name="name" type="text" autocomplete="name" placeholder="Your name" required>
+      <small class="hint">Required</small>
+    </div>
+
+    <div class="field">
+      <label for="email" class="field-label">Email</label>
+      <input id="email" name="email" type="email" autocomplete="email" placeholder="Your email" required>
+      <small class="hint">Required</small>
+    </div>
+  </div>
+
+  <div class="field">
+    <label for="subject" class="field-label">Subject</label>
+    <input id="subject" name="subject" type="text" placeholder="Message subject" required>
+    <small class="hint">Required</small>
+  </div>
+
+  <div class="field">
+    <label for="message" class="field-label">Message</label>
+    <textarea id="message" name="message" rows="5" placeholder="Your message..." required></textarea>
+    <small class="hint">Required</small>
+  </div>
+
+  <button class="btn primary" type="submit">Send Message</button>
+  <p id="status" class="status" aria-live="polite"></p>
+</form>
+<script>
+  (function () {
+    const form = document.getElementById("contactForm");
+    const statusEl = document.getElementById("status");
+
+    // Set your real email here
+    const TO_EMAIL = "acf0916@gmail.com";
+
+    form.addEventListener("submit", function (e) {
+      e.preventDefault();
+
+      const name = document.getElementById("name").value.trim();
+      const email = document.getElementById("email").value.trim();
+      const subject = document.getElementById("subject").value.trim();
+      const message = document.getElementById("message").value.trim();
+
+      const body =
+`Name: ${name}
+Email: ${email}
+
+Message:
+${message}`;
+
+      const mailtoLink =
+        `mailto:${TO_EMAIL}` +
+        `?subject=${encodeURIComponent(subject)}` +
+        `&body=${encodeURIComponent(body)}`;
+
+      statusEl.textContent = "Opening your email app…";
+
+      // Open the user's email client
+      window.location.href = mailtoLink;
+    });
+  })();
+</script>
+
         </div>
       </div>
     </section>
